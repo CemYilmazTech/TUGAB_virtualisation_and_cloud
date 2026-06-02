@@ -1,0 +1,293 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{baggio}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1979399670dacf1c35dfb7f8893488d3}{%
+           family={Baggio},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37ed98bbf8018ddd8309ec092900e3dd}{%
+           family={Lambalgen},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=f3c3f3b67fa28b1d008edfbfffecb356}{%
+           family={Hagoort},
+           familyi={H\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{73ae60a359b7b73e7ab18abade5b8583}
+      \strng{fullhash}{5271cc29576c16581929e66e534b8008}
+      \strng{bibnamehash}{5271cc29576c16581929e66e534b8008}
+      \strng{authorbibnamehash}{5271cc29576c16581929e66e534b8008}
+      \strng{authornamehash}{73ae60a359b7b73e7ab18abade5b8583}
+      \strng{authorfullhash}{5271cc29576c16581929e66e534b8008}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Memory and Language}
+      \field{title}{Computing and recomputing discourse models}
+      \field{volume}{59}
+      \field{year}{2008}
+      \field{pages}{36\bibrangedash 53}
+      \range{pages}{18}
+    \endentry
+    \entry{csibra}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a710bba65cc18eb80f9e8755f3a55c0b}{%
+           family={Csibra},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4413e2a16c6b6c7d2f5db287263b2dda}{%
+           family={Gergely},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \strng{fullhash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \strng{bibnamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \strng{authorbibnamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \strng{authornamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \strng{authorfullhash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Psychologica}
+      \field{title}{Obsessed with goals: Teleological reasoning in humans}
+      \field{volume}{124}
+      \field{year}{2007}
+      \field{pages}{60\bibrangedash 78}
+      \range{pages}{19}
+    \endentry
+    \entry{pijnacker}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=02452de105eec6b542fca1c773c75628}{%
+           family={Pijnacker},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f12b417b4580f3cd426b96785aea89e6}{%
+           family={Geurts},
+           familyi={G\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37ed98bbf8018ddd8309ec092900e3dd}{%
+           family={Lambalgen},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=4e2f50834fa933df791c6dfc6c9cce50}{%
+           family={Buitelaar},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3c3f3b67fa28b1d008edfbfffecb356}{%
+           family={Hagoort},
+           familyi={H\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8131e01acb6368d6d2d092c2d2742030}
+      \strng{fullhash}{8bd2e2770cc3a71cc72d2e70756e35bc}
+      \strng{bibnamehash}{8bd2e2770cc3a71cc72d2e70756e35bc}
+      \strng{authorbibnamehash}{8bd2e2770cc3a71cc72d2e70756e35bc}
+      \strng{authornamehash}{8131e01acb6368d6d2d092c2d2742030}
+      \strng{authorfullhash}{8bd2e2770cc3a71cc72d2e70756e35bc}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Cognitive Neuroscience}
+      \field{title}{Reasoning with exceptions: An ERP study}
+      \field{volume}{23}
+      \field{year}{2010}
+      \field{pages}{471\bibrangedash 480}
+      \range{pages}{10}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{baggio}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1979399670dacf1c35dfb7f8893488d3}{%
+           family={Baggio},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37ed98bbf8018ddd8309ec092900e3dd}{%
+           family={Lambalgen},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=f3c3f3b67fa28b1d008edfbfffecb356}{%
+           family={Hagoort},
+           familyi={H\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{73ae60a359b7b73e7ab18abade5b8583}
+      \strng{fullhash}{5271cc29576c16581929e66e534b8008}
+      \strng{bibnamehash}{5271cc29576c16581929e66e534b8008}
+      \strng{authorbibnamehash}{5271cc29576c16581929e66e534b8008}
+      \strng{authornamehash}{73ae60a359b7b73e7ab18abade5b8583}
+      \strng{authorfullhash}{5271cc29576c16581929e66e534b8008}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Memory and Language}
+      \field{title}{Computing and recomputing discourse models}
+      \field{volume}{59}
+      \field{year}{2008}
+      \field{pages}{36\bibrangedash 53}
+      \range{pages}{18}
+    \endentry
+    \entry{csibra}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a710bba65cc18eb80f9e8755f3a55c0b}{%
+           family={Csibra},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4413e2a16c6b6c7d2f5db287263b2dda}{%
+           family={Gergely},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \strng{fullhash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \strng{bibnamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \strng{authorbibnamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \strng{authornamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \strng{authorfullhash}{dab755728a0e13a2b0f3f9a1649ffc36}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Psychologica}
+      \field{title}{Obsessed with goals: Teleological reasoning in humans}
+      \field{volume}{124}
+      \field{year}{2007}
+      \field{pages}{60\bibrangedash 78}
+      \range{pages}{19}
+    \endentry
+    \entry{pijnacker}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=02452de105eec6b542fca1c773c75628}{%
+           family={Pijnacker},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f12b417b4580f3cd426b96785aea89e6}{%
+           family={Geurts},
+           familyi={G\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37ed98bbf8018ddd8309ec092900e3dd}{%
+           family={Lambalgen},
+           familyi={L\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=4e2f50834fa933df791c6dfc6c9cce50}{%
+           family={Buitelaar},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3c3f3b67fa28b1d008edfbfffecb356}{%
+           family={Hagoort},
+           familyi={H\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8131e01acb6368d6d2d092c2d2742030}
+      \strng{fullhash}{8bd2e2770cc3a71cc72d2e70756e35bc}
+      \strng{bibnamehash}{8bd2e2770cc3a71cc72d2e70756e35bc}
+      \strng{authorbibnamehash}{8bd2e2770cc3a71cc72d2e70756e35bc}
+      \strng{authornamehash}{8131e01acb6368d6d2d092c2d2742030}
+      \strng{authorfullhash}{8bd2e2770cc3a71cc72d2e70756e35bc}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Cognitive Neuroscience}
+      \field{title}{Reasoning with exceptions: An ERP study}
+      \field{volume}{23}
+      \field{year}{2010}
+      \field{pages}{471\bibrangedash 480}
+      \range{pages}{10}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
