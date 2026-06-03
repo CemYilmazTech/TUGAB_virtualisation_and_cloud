@@ -19,35 +19,69 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global}
-    \entry{baggio}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=1979399670dacf1c35dfb7f8893488d3}{%
-           family={Baggio},
+    \entry{barhamXenArtVirtualization2003}{article}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=08cf514c08137f94d73b590060797f5b}{%
+           family={Barham},
            familyi={B\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=37ed98bbf8018ddd8309ec092900e3dd}{%
-           family={Lambalgen},
-           familyi={L\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod},
-           givenun=0,
-           prefix={van},
-           prefixi={v\bibinitperiod}}}%
-        {{un=0,uniquepart=base,hash=f3c3f3b67fa28b1d008edfbfffecb356}{%
-           family={Hagoort},
-           familyi={H\bibinitperiod},
-           given={P.},
+           given={Paul},
            giveni={P\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=d189df3dbfa35215ce11c7a50f75ef9b}{%
+           family={Dragovic},
+           familyi={D\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=629ffb46786b71518682f61124cc155b}{%
+           family={Fraser},
+           familyi={F\bibinitperiod},
+           given={Keir},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae4b8fa8c5628beeb183f814b5bbfcae}{%
+           family={Hand},
+           familyi={H\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e434afe0c3fcdfbc56aa7ee61ba43181}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec18333a2459427fda4d6c2f66be22e4}{%
+           family={Ho},
+           familyi={H\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa3ae5e343a7c6399697a3aaffd5d05a}{%
+           family={Neugebauer},
+           familyi={N\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=54b3452c2c006403f10e98ce4fb7a0fc}{%
+           family={Pratt},
+           familyi={P\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1741586c200c40cae80d9e75886f8e56}{%
+           family={Warfield},
+           familyi={W\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{73ae60a359b7b73e7ab18abade5b8583}
-      \strng{fullhash}{5271cc29576c16581929e66e534b8008}
-      \strng{bibnamehash}{5271cc29576c16581929e66e534b8008}
-      \strng{authorbibnamehash}{5271cc29576c16581929e66e534b8008}
-      \strng{authornamehash}{73ae60a359b7b73e7ab18abade5b8583}
-      \strng{authorfullhash}{5271cc29576c16581929e66e534b8008}
+      \strng{namehash}{e4194f7530e001a55fb104495f1875c1}
+      \strng{fullhash}{9fc266666c8e841924c809944ae6f1e1}
+      \strng{bibnamehash}{9fc266666c8e841924c809944ae6f1e1}
+      \strng{authorbibnamehash}{9fc266666c8e841924c809944ae6f1e1}
+      \strng{authornamehash}{e4194f7530e001a55fb104495f1875c1}
+      \strng{authorfullhash}{9fc266666c8e841924c809944ae6f1e1}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
@@ -55,89 +89,92 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Memory and Language}
-      \field{title}{Computing and recomputing discourse models}
-      \field{volume}{59}
-      \field{year}{2008}
-      \field{pages}{36\bibrangedash 53}
-      \range{pages}{18}
+      \field{day}{1}
+      \field{eventtitle}{{{ACM SIGOPS Operating Systems Review}}}
+      \field{month}{1}
+      \field{title}{Xen and the Art of Virtualization}
+      \field{volume}{37}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{pages}{164\bibrangedash 177}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1145/1165389.945462
+      \endverb
     \endentry
-    \entry{csibra}{article}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=a710bba65cc18eb80f9e8755f3a55c0b}{%
-           family={Csibra},
-           familyi={C\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod},
+    \entry{djordjevicPerformanceComparisonKVM2022}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=ec5daded55aa571b1112f0a57779556d}{%
+           family={Djordjevic},
+           familyi={D\bibinitperiod},
+           given={Borislav},
+           giveni={B\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=4413e2a16c6b6c7d2f5db287263b2dda}{%
-           family={Gergely},
-           familyi={G\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod},
+        {{un=0,uniquepart=base,hash=6d4ada7f277e636a025b459e8c5934ff}{%
+           family={Timcenko},
+           familyi={T\bibinitperiod},
+           given={Valentina},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09258d349e10e61137797de8fbafc548}{%
+           family={Kraljevic},
+           familyi={K\bibinitperiod},
+           given={Nenad},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e165addb69b66e9a895ac51d067aaa5}{%
+           family={Jovicic},
+           familyi={J\bibinitperiod},
+           given={Nikola},
+           giveni={N\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \strng{fullhash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \strng{bibnamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \strng{authorbibnamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \strng{authornamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \strng{authorfullhash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \strng{namehash}{940f0865851632161cc19598e999f293}
+      \strng{fullhash}{461a139060f3d0391869876614f71c72}
+      \strng{bibnamehash}{461a139060f3d0391869876614f71c72}
+      \strng{authorbibnamehash}{461a139060f3d0391869876614f71c72}
+      \strng{authornamehash}{940f0865851632161cc19598e999f293}
+      \strng{authorfullhash}{461a139060f3d0391869876614f71c72}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Acta Psychologica}
-      \field{title}{Obsessed with goals: Teleological reasoning in humans}
-      \field{volume}{124}
-      \field{year}{2007}
-      \field{pages}{60\bibrangedash 78}
-      \range{pages}{19}
+      \field{day}{15}
+      \field{month}{11}
+      \field{pagetotal}{1}
+      \field{title}{Performance Comparison of {{KVM}} and {{Proxmox Type-1 Hypervisors}}}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{4}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1109/TELFOR56187.2022.9983666
+      \endverb
     \endentry
-    \entry{pijnacker}{article}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=02452de105eec6b542fca1c773c75628}{%
-           family={Pijnacker},
+    \entry{popekFormalRequirementsVirtualizable1974}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ff662c83d7407be974bfad3bd02456bc}{%
+           family={Popek},
            familyi={P\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod},
+           given={Gerald\bibnamedelima J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=f12b417b4580f3cd426b96785aea89e6}{%
-           family={Geurts},
+        {{un=0,uniquepart=base,hash=1ba1863f72bd96fc6a4013073ea74931}{%
+           family={Goldberg},
            familyi={G\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=37ed98bbf8018ddd8309ec092900e3dd}{%
-           family={Lambalgen},
-           familyi={L\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod},
-           givenun=0,
-           prefix={van},
-           prefixi={v\bibinitperiod}}}%
-        {{un=0,uniquepart=base,hash=4e2f50834fa933df791c6dfc6c9cce50}{%
-           family={Buitelaar},
-           familyi={B\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f3c3f3b67fa28b1d008edfbfffecb356}{%
-           family={Hagoort},
-           familyi={H\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod},
+           given={Robert\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{8131e01acb6368d6d2d092c2d2742030}
-      \strng{fullhash}{8bd2e2770cc3a71cc72d2e70756e35bc}
-      \strng{bibnamehash}{8bd2e2770cc3a71cc72d2e70756e35bc}
-      \strng{authorbibnamehash}{8bd2e2770cc3a71cc72d2e70756e35bc}
-      \strng{authornamehash}{8131e01acb6368d6d2d092c2d2742030}
-      \strng{authorfullhash}{8bd2e2770cc3a71cc72d2e70756e35bc}
+      \strng{namehash}{771c2880bb8eab099cde888521e795ad}
+      \strng{fullhash}{771c2880bb8eab099cde888521e795ad}
+      \strng{bibnamehash}{771c2880bb8eab099cde888521e795ad}
+      \strng{authorbibnamehash}{771c2880bb8eab099cde888521e795ad}
+      \strng{authornamehash}{771c2880bb8eab099cde888521e795ad}
+      \strng{authorfullhash}{771c2880bb8eab099cde888521e795ad}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
@@ -145,44 +182,151 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Cognitive Neuroscience}
-      \field{title}{Reasoning with exceptions: An ERP study}
-      \field{volume}{23}
-      \field{year}{2010}
-      \field{pages}{471\bibrangedash 480}
+      \field{abstract}{Virtual machine systems have been implemented on a limited number of third generation computer systems, e.g. CP-67 on the IBM 360/67. From previous empirical studies, it is known that certain third generation computer systems, e.g. the DEC PDP-10, cannot support a virtual machine system. In this paper, model of a third-generation-like computer system is developed. Formal techniques are used to derive precise sufficient conditions to test whether such an architecture can support virtual machines.}
+      \field{day}{1}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Communications of the ACM}
+      \field{month}{7}
+      \field{number}{7}
+      \field{shortjournal}{Commun. ACM}
+      \field{title}{Formal Requirements for Virtualizable Third Generation Architectures}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{17}
+      \field{year}{1974}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{412\bibrangedash 421}
       \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/361011.361073
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/361011.361073
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/361011.361073
+      \endverb
+    \endentry
+    \entry{smalleyWhatAreHypervisors2024}{online}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=80c310706a08800d81c85a858c87b27e}{%
+           family={Susnjara},
+           familyi={S\bibinitperiod},
+           given={Stephanie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d08dfe1fb1123075ed9c0b177fdef575}{%
+           family={Smalley},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \strng{fullhash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \strng{bibnamehash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \strng{authorbibnamehash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \strng{authornamehash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \strng{authorfullhash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{A hypervisor is software that enables multiple instances of operating systems to run on the same physical computing resources.}
+      \field{day}{30}
+      \field{hour}{0}
+      \field{langid}{english}
+      \field{minute}{0}
+      \field{month}{10}
+      \field{second}{0}
+      \field{shorttitle}{What {{Are Hypervisors}}?}
+      \field{title}{What {{Are Hypervisors}}? | {{IBM}}}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Cem\Zotero\storage\KYEWQW6E\hypervisors.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ibm.com/think/topics/hypervisors
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/think/topics/hypervisors
+      \endverb
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
-    \entry{baggio}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=1979399670dacf1c35dfb7f8893488d3}{%
-           family={Baggio},
+    \entry{barhamXenArtVirtualization2003}{article}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=08cf514c08137f94d73b590060797f5b}{%
+           family={Barham},
            familyi={B\bibinitperiod},
-           given={R.},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=37ed98bbf8018ddd8309ec092900e3dd}{%
-           family={Lambalgen},
-           familyi={L\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod},
-           givenun=0,
-           prefix={van},
-           prefixi={v\bibinitperiod}}}%
-        {{un=0,uniquepart=base,hash=f3c3f3b67fa28b1d008edfbfffecb356}{%
-           family={Hagoort},
-           familyi={H\bibinitperiod},
-           given={P.},
+           given={Paul},
            giveni={P\bibinitperiod},
            givenun=0}}%
+        {{un=0,uniquepart=base,hash=d189df3dbfa35215ce11c7a50f75ef9b}{%
+           family={Dragovic},
+           familyi={D\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=629ffb46786b71518682f61124cc155b}{%
+           family={Fraser},
+           familyi={F\bibinitperiod},
+           given={Keir},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae4b8fa8c5628beeb183f814b5bbfcae}{%
+           family={Hand},
+           familyi={H\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e434afe0c3fcdfbc56aa7ee61ba43181}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec18333a2459427fda4d6c2f66be22e4}{%
+           family={Ho},
+           familyi={H\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa3ae5e343a7c6399697a3aaffd5d05a}{%
+           family={Neugebauer},
+           familyi={N\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=54b3452c2c006403f10e98ce4fb7a0fc}{%
+           family={Pratt},
+           familyi={P\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1741586c200c40cae80d9e75886f8e56}{%
+           family={Warfield},
+           familyi={W\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{73ae60a359b7b73e7ab18abade5b8583}
-      \strng{fullhash}{5271cc29576c16581929e66e534b8008}
-      \strng{bibnamehash}{5271cc29576c16581929e66e534b8008}
-      \strng{authorbibnamehash}{5271cc29576c16581929e66e534b8008}
-      \strng{authornamehash}{73ae60a359b7b73e7ab18abade5b8583}
-      \strng{authorfullhash}{5271cc29576c16581929e66e534b8008}
+      \strng{namehash}{e4194f7530e001a55fb104495f1875c1}
+      \strng{fullhash}{9fc266666c8e841924c809944ae6f1e1}
+      \strng{bibnamehash}{9fc266666c8e841924c809944ae6f1e1}
+      \strng{authorbibnamehash}{9fc266666c8e841924c809944ae6f1e1}
+      \strng{authornamehash}{e4194f7530e001a55fb104495f1875c1}
+      \strng{authorfullhash}{9fc266666c8e841924c809944ae6f1e1}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
@@ -190,89 +334,92 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Memory and Language}
-      \field{title}{Computing and recomputing discourse models}
-      \field{volume}{59}
-      \field{year}{2008}
-      \field{pages}{36\bibrangedash 53}
-      \range{pages}{18}
+      \field{day}{1}
+      \field{eventtitle}{{{ACM SIGOPS Operating Systems Review}}}
+      \field{month}{1}
+      \field{title}{Xen and the Art of Virtualization}
+      \field{volume}{37}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{pages}{164\bibrangedash 177}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1145/1165389.945462
+      \endverb
     \endentry
-    \entry{csibra}{article}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=a710bba65cc18eb80f9e8755f3a55c0b}{%
-           family={Csibra},
-           familyi={C\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod},
+    \entry{djordjevicPerformanceComparisonKVM2022}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=ec5daded55aa571b1112f0a57779556d}{%
+           family={Djordjevic},
+           familyi={D\bibinitperiod},
+           given={Borislav},
+           giveni={B\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=4413e2a16c6b6c7d2f5db287263b2dda}{%
-           family={Gergely},
-           familyi={G\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod},
+        {{un=0,uniquepart=base,hash=6d4ada7f277e636a025b459e8c5934ff}{%
+           family={Timcenko},
+           familyi={T\bibinitperiod},
+           given={Valentina},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09258d349e10e61137797de8fbafc548}{%
+           family={Kraljevic},
+           familyi={K\bibinitperiod},
+           given={Nenad},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e165addb69b66e9a895ac51d067aaa5}{%
+           family={Jovicic},
+           familyi={J\bibinitperiod},
+           given={Nikola},
+           giveni={N\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \strng{fullhash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \strng{bibnamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \strng{authorbibnamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \strng{authornamehash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \strng{authorfullhash}{dab755728a0e13a2b0f3f9a1649ffc36}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \strng{namehash}{940f0865851632161cc19598e999f293}
+      \strng{fullhash}{461a139060f3d0391869876614f71c72}
+      \strng{bibnamehash}{461a139060f3d0391869876614f71c72}
+      \strng{authorbibnamehash}{461a139060f3d0391869876614f71c72}
+      \strng{authornamehash}{940f0865851632161cc19598e999f293}
+      \strng{authorfullhash}{461a139060f3d0391869876614f71c72}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Acta Psychologica}
-      \field{title}{Obsessed with goals: Teleological reasoning in humans}
-      \field{volume}{124}
-      \field{year}{2007}
-      \field{pages}{60\bibrangedash 78}
-      \range{pages}{19}
+      \field{day}{15}
+      \field{month}{11}
+      \field{pagetotal}{1}
+      \field{title}{Performance Comparison of {{KVM}} and {{Proxmox Type-1 Hypervisors}}}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{4}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1109/TELFOR56187.2022.9983666
+      \endverb
     \endentry
-    \entry{pijnacker}{article}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=02452de105eec6b542fca1c773c75628}{%
-           family={Pijnacker},
+    \entry{popekFormalRequirementsVirtualizable1974}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ff662c83d7407be974bfad3bd02456bc}{%
+           family={Popek},
            familyi={P\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod},
+           given={Gerald\bibnamedelima J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=f12b417b4580f3cd426b96785aea89e6}{%
-           family={Geurts},
+        {{un=0,uniquepart=base,hash=1ba1863f72bd96fc6a4013073ea74931}{%
+           family={Goldberg},
            familyi={G\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=37ed98bbf8018ddd8309ec092900e3dd}{%
-           family={Lambalgen},
-           familyi={L\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod},
-           givenun=0,
-           prefix={van},
-           prefixi={v\bibinitperiod}}}%
-        {{un=0,uniquepart=base,hash=4e2f50834fa933df791c6dfc6c9cce50}{%
-           family={Buitelaar},
-           familyi={B\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f3c3f3b67fa28b1d008edfbfffecb356}{%
-           family={Hagoort},
-           familyi={H\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod},
+           given={Robert\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{8131e01acb6368d6d2d092c2d2742030}
-      \strng{fullhash}{8bd2e2770cc3a71cc72d2e70756e35bc}
-      \strng{bibnamehash}{8bd2e2770cc3a71cc72d2e70756e35bc}
-      \strng{authorbibnamehash}{8bd2e2770cc3a71cc72d2e70756e35bc}
-      \strng{authornamehash}{8131e01acb6368d6d2d092c2d2742030}
-      \strng{authorfullhash}{8bd2e2770cc3a71cc72d2e70756e35bc}
+      \strng{namehash}{771c2880bb8eab099cde888521e795ad}
+      \strng{fullhash}{771c2880bb8eab099cde888521e795ad}
+      \strng{bibnamehash}{771c2880bb8eab099cde888521e795ad}
+      \strng{authorbibnamehash}{771c2880bb8eab099cde888521e795ad}
+      \strng{authornamehash}{771c2880bb8eab099cde888521e795ad}
+      \strng{authorfullhash}{771c2880bb8eab099cde888521e795ad}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{extradatescope}{labelyear}
@@ -280,12 +427,85 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Cognitive Neuroscience}
-      \field{title}{Reasoning with exceptions: An ERP study}
-      \field{volume}{23}
-      \field{year}{2010}
-      \field{pages}{471\bibrangedash 480}
+      \field{abstract}{Virtual machine systems have been implemented on a limited number of third generation computer systems, e.g. CP-67 on the IBM 360/67. From previous empirical studies, it is known that certain third generation computer systems, e.g. the DEC PDP-10, cannot support a virtual machine system. In this paper, model of a third-generation-like computer system is developed. Formal techniques are used to derive precise sufficient conditions to test whether such an architecture can support virtual machines.}
+      \field{day}{1}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Communications of the ACM}
+      \field{month}{7}
+      \field{number}{7}
+      \field{shortjournal}{Commun. ACM}
+      \field{title}{Formal Requirements for Virtualizable Third Generation Architectures}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{17}
+      \field{year}{1974}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{412\bibrangedash 421}
       \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/361011.361073
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/361011.361073
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/361011.361073
+      \endverb
+    \endentry
+    \entry{smalleyWhatAreHypervisors2024}{online}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=80c310706a08800d81c85a858c87b27e}{%
+           family={Susnjara},
+           familyi={S\bibinitperiod},
+           given={Stephanie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d08dfe1fb1123075ed9c0b177fdef575}{%
+           family={Smalley},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \strng{fullhash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \strng{bibnamehash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \strng{authorbibnamehash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \strng{authornamehash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \strng{authorfullhash}{444d8b448a46eaf17b3d4ba9a558e93f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{A hypervisor is software that enables multiple instances of operating systems to run on the same physical computing resources.}
+      \field{day}{30}
+      \field{hour}{0}
+      \field{langid}{english}
+      \field{minute}{0}
+      \field{month}{10}
+      \field{second}{0}
+      \field{shorttitle}{What {{Are Hypervisors}}?}
+      \field{title}{What {{Are Hypervisors}}? | {{IBM}}}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Cem\Zotero\storage\KYEWQW6E\hypervisors.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ibm.com/think/topics/hypervisors
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/think/topics/hypervisors
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

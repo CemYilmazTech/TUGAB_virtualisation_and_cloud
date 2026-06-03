@@ -3059,13 +3059,15 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">baggio</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">baggio</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">baggio</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">pijnacker</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">baggio</bcf:citekey>
-    <bcf:citekey order="5" intorder="2">pijnacker</bcf:citekey>
-    <bcf:citekey order="5" intorder="3">csibra</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">popekFormalRequirementsVirtualizable1974</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">popekFormalRequirementsVirtualizable1974</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">smalleyWhatAreHypervisors2024</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">smalleyWhatAreHypervisors2024</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">popekFormalRequirementsVirtualizable1974</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">smalleyWhatAreHypervisors2024</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">smalleyWhatAreHypervisors2024</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">barhamXenArtVirtualization2003</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">djordjevicPerformanceComparisonKVM2022</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">
