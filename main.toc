@@ -5,18 +5,21 @@
 \contentsline {subsection}{\numberline {2.3}Virtual Machine Configuration}{4}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Benchmark Tools}{5}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Benchmark Procedures}{5}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}CPU Benchmark}{5}{subsubsection.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.5.2}Memory Benchmark}{5}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.1}CPU Benchmark}{6}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Memory Benchmark}{6}{subsubsection.2.5.2}%
 \contentsline {subsubsection}{\numberline {2.5.3}Disk I/O Benchmark}{6}{subsubsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.6}Controlled Variables}{6}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.6}Controlled Variables}{7}{subsection.2.6}%
 \contentsline {section}{\numberline {3}Results}{7}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Visualisation Methodology}{7}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}CPU Benchmarks}{8}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Memory Benchmarks}{8}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Disk I/O Benchmarks}{9}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Discussion}{9}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion}{9}{section.5}%
-\contentsline {section}{Appendices}{11}{section*.10}%
-\contentsline {section}{\numberline {A}CPU Benchmark Results}{11}{appendix.A}%
-\contentsline {section}{\numberline {B}Memory Benchmark Results}{12}{appendix.B}%
-\contentsline {section}{\numberline {C}Disk I/O Benchmark Results}{13}{appendix.C}%
+\contentsline {subsection}{\numberline {3.3}Memory Benchmarks}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Disk I/O Benchmarks}{10}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Discussion}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}CPU Performance}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Memory Performance}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Disk I/O Performance}{12}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Conclusion}{13}{section.5}%
+\contentsline {section}{Appendices}{16}{section*.14}%
+\contentsline {section}{\numberline {A}CPU Benchmark Results}{16}{appendix.A}%
+\contentsline {section}{\numberline {B}Memory Benchmark Results}{17}{appendix.B}%
+\contentsline {section}{\numberline {C}Disk I/O Benchmark Results}{18}{appendix.C}%

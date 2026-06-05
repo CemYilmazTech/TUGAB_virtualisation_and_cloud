@@ -40,15 +40,15 @@
 
 \definecolor{tugblue}{HTML}{33588B}
 \allsectionsfont{\color{tugblue}}
-\newcommand{\coloredrule}[2][tugblue]{%
-  \textcolor{#1}{\rule{\linewidth}{#2}}%
+\newcommand{\coloredrule}[2][tugblue]{
+  \textcolor{#1}{\rule{\linewidth}{#2}}
 }
 
 \usepackage{import}
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{color}
-\newcommand{\incfig}[2][1]{%
+\newcommand{\incfig}[2][1]{
     \def\svgwidth{#1\columnwidth}
     \import{./figures/}{#2.pdf_tex}
 }
@@ -69,6 +69,7 @@
 \newtheorem*{note}{Note}
 
 \definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+\definecolor{hypervred}{RGB}{238,59,65}
 
 \lstset{
   language=bash,
@@ -103,22 +104,22 @@
             \coloredrule{2pt}\par
 
             \vskip 3cm
-    
+
             \includesvg[width=0.4\textwidth]{gabrovo}
-    
+
             \vspace{3cm}
             \Large CEM YILMAZ\\
             Faculty \textnumero \ 22572118\\
             \Large Technical University of Gabrovo \\
             \Large Faculty of \\
             \Large\textit{Electrical Engineering and Electronics}\\
-    
+
             \vspace{2cm}
             \Large Project made for the degree of\\
             \Large \textit{Software and Computer Engineering}\\
             \Large \today \\
             \vspace{0.5cm}
-    
+
             \vfill
         \end{center}
     \end{titlepage}
@@ -126,34 +127,34 @@
 	\tableofcontents
 	\newpage
 	\section{Introduction}
-    Virtualisation is a method of isolating and abstracting computing resources, allowing 
-    multiple virtual instances to run on a single physical machine. A virtual machine 
-    is defined as an efficient, isolated duplicate of a real machine 
-    \parencite{popekFormalRequirementsVirtualizable1974}. Popek and Goldberg categorise 
-    three essential characteristics of a virtual machine: an ``essentially identical'' 
+    Virtualisation is a method of isolating and abstracting computing resources, allowing
+    multiple virtual instances to run on a single physical machine. A virtual machine
+    is defined as an efficient, isolated duplicate of a real machine
+    \parencite{popekFormalRequirementsVirtualizable1974}. Popek and Goldberg categorise
+    three essential characteristics of a virtual machine: an ``essentially identical''
     environment, efficiency, and resource control \parencite{popekFormalRequirementsVirtualizable1974}. \\
     \\
-    \noindent Virtualisation has become a fundamental technology in modern computing, 
-    enabling the efficient use of hardware resources, improving scalability, and 
-    facilitating the deployment of applications in cloud environments. However, at the 
+    \noindent Virtualisation has become a fundamental technology in modern computing,
+    enabling the efficient use of hardware resources, improving scalability, and
+    facilitating the deployment of applications in cloud environments. However, at the
     heart of virtualisation and its technologies lies two distinct methods of achieving it:
      the type-1 (bare-metal) and type-2 (hosted) hypervisors \parencite{smalleyWhatAreHypervisors2024}.\\
     \\
-    \noindent Type-1 hypervisors run directly on the host's physical hardware allowing it to 
-    directly interact with the underlying infrastructure such as the central processing 
-    unit (CPU), memory, graphical compute, and storage. The direct access to hardware 
-    resources allows type-1 hypervisors to provide better performance and scalability 
-    compared to type-2 hypervisors. Type-1 hypervisors are commonly used in enterprise 
-    environments and data centers where performance and security are critical. Examples 
-    of type-1 hypervisors include VMware ESXi, Microsoft Hyper-V, Citrix Hypervisor, 
+    \noindent Type-1 hypervisors run directly on the host's physical hardware allowing it to
+    directly interact with the underlying infrastructure such as the central processing
+    unit (CPU), memory, graphical compute, and storage. The direct access to hardware
+    resources allows type-1 hypervisors to provide better performance and scalability
+    compared to type-2 hypervisors. Type-1 hypervisors are commonly used in enterprise
+    environments and data centers where performance and security are critical. Examples
+    of type-1 hypervisors include VMware ESXi, Microsoft Hyper-V, Citrix Hypervisor,
     Kernel-based Virtual Machine (KVM) and its derivatives e.g. Proxmox VE \parencite{smalleyWhatAreHypervisors2024}.\\
     \\
-    \noindent Type-2 hypervisors, however, do not directly run in the underlying 
-    infrastructure. Instead, type-2 hypervisors run as a layer on top of the host's 
-    existing operating system (OS). For communication with the physical layer, the type-2 
-    hypervisor creates a bridge between the OS and the virtualised environment. This 
-    additional layer of abstraction can lead to performance overhead compared to type-1 
-    hypervisors, as it directly affects the Popek and Goldberg criterion of efficiency. Specifically, a statistically dominant subset of instructions must 
+    \noindent Type-2 hypervisors, however, do not directly run in the underlying
+    infrastructure. Instead, type-2 hypervisors run as a layer on top of the host's
+    existing operating system (OS). For communication with the physical layer, the type-2
+    hypervisor creates a bridge between the OS and the virtualised environment. This
+    additional layer of abstraction can lead to performance overhead compared to type-1
+    hypervisors, as it directly affects the Popek and Goldberg criterion of efficiency. Specifically, a statistically dominant subset of instructions must
     execute directly on the physical processor without VMM intervention \parencite{popekFormalRequirementsVirtualizable1974}. Type-2 hypervisors are often used for desktop virtualisation and testing environments where ease of use and flexibility are more important than raw performance. Examples of type-2 hypervisors include VMWare workstation, Oracle VirtualBox, Microsoft Virtual PC \parencite{smalleyWhatAreHypervisors2024}.\\
     \\
     \begin{figure}[H]
@@ -203,21 +204,21 @@
         \label{fig:hypervisor-types}
     \end{figure}
     \noindent Modern virtualisation technologies have evolved to minimise overhead and improve
-     performance for both types of hypervisors. For instance, 
-     hardware-assisted virtualisation features such as 
+     performance for both types of hypervisors. For instance,
+     hardware-assisted virtualisation features such as
      Intel VT-x and AMD-V have been introduced to enhance the performance
-      of virtual machines by allowing certain instructions to be executed 
-      directly on the physical CPU, reducing the need for VMM intervention 
-      \parencite{smalleyWhatAreHypervisors2024}. Additionally, advancements 
-      in memory management and I/O virtualisation have further improved the 
-      efficiency of virtualised environments \parencite{barhamXenArtVirtualization2003}. However, the question of whether 
-      measurable difference remain and under what workload conditions is the 
+      of virtual machines by allowing certain instructions to be executed
+      directly on the physical CPU, reducing the need for VMM intervention
+      \parencite{smalleyWhatAreHypervisors2024}. Additionally, advancements
+      in memory management and I/O virtualisation have further improved the
+      efficiency of virtualised environments \parencite{barhamXenArtVirtualization2003}. However, the question of whether
+      measurable difference remain and under what workload conditions is the
       central concern of this paper.\\
     \\
-    \noindent This paper presents a comparative performance evaluation of 
-    type-1 and type-2 hypervisor technologies under controlled laboratory benchmarks. 
-    The methodology, results and analysis that follow aim to determine whether the 
-    theoretical performance advantage of type-1 hypervisors is still observable 
+    \noindent This paper presents a comparative performance evaluation of
+    type-1 and type-2 hypervisor technologies under controlled laboratory benchmarks.
+    The methodology, results and analysis that follow aim to determine whether the
+    theoretical performance advantage of type-1 hypervisors is still observable
     in practice today.
     \section{Methodology}
 
@@ -248,10 +249,15 @@
     Two hypervisors were selected to represent each architectural type:
 
     \begin{itemize}
-        \item \textbf{Type-1: Proxmox VE 9.2-1.} Proxmox VE uses KVM as its virtualisation
-         backend and is classified as a Type 1 hypervisor 
-        \parencite{djordjevicPerformanceComparisonKVM2022}. It was installed directly on the
-        physical hardware with no general purpose host OS present. Accessed at \url{https://enterprise.proxmox.com/iso/proxmox-ve_9.2-1.iso}.
+        \item \textbf{Type-1: Microsoft Hyper-V 10.0.26100.8457 (Windows 11 25H2,
+        OS Build 26200.8524).} Hyper-V is a native Type-1 hypervisor integrated
+        into Windows 11, running as a thin hypervisor layer beneath the host OS
+        \parencite{microsoftHyperVVirtualizationWindows}. It was enabled via Windows
+        Features on the existing Windows 11 25H2 installation. Initial configuration
+        used Generation 1, which enforces BIOS firmware and an emulated IDE disk
+        controller. As IDE is an emulated device introducing additional I/O processing
+        overhead unrelated to hypervisor architecture, the VM was recreated as
+        Generation 2, which uses UEFI firmware and a synthetic small computer system interface (SCSI) controller.
 
         \item \textbf{Type-2: Oracle VirtualBox 7.2.8.} VirtualBox was installed
         on the Windows 11 host OS. As a hosted hypervisor, VirtualBox relies on
@@ -260,12 +266,22 @@
         source of overhead being measured in this experiment. Accessed at \url{https://download.virtualbox.org/virtualbox/7.2.8/VirtualBox-7.2.8-173730-Win.exe}.
     \end{itemize}
 
+    \noindent Prior to benchmarking for VirtualBox, Windows 11 Virtualization Based Security (VBS) and
+    Memory Integrity were disabled, and the Hyper-V hypervisor launch type was
+    set to off via \texttt{bcdedit /set hypervisorlaunchtype off}. This was
+    necessary to ensure VirtualBox operated as a true Type-2 hypervisor with
+    direct access to the host hardware, rather than as a guest of the Hyper-V
+    hypervisor which Windows 11 enables by default. Without this step, VirtualBox 
+    would be running as a potential Hyper-V guest, invalidating the Type-1 vs 
+    Type-2 architectural comparison. Additionally, almost all non-essential background tasks were 
+    killed on the host OS to minimise interference with the benchmarks, and the 
+    host was rebooted after each hypervisor configuration change to ensure a clean state.
     \subsection{Virtual Machine Configuration}
 
     To isolate hypervisor architecture as the sole independent variable, both
-    virtual machines were configured identically across all parameters. The
+    virtual machines were configured identically across all parameters where possible. The
     guest operating system was \textbf{Ubuntu Server 26.04 LTS} in both cases,
-    installed from the same ISO image and accessed at \url{https://releases.ubuntu.com/26.04/ubuntu-26.04-live-server-amd64.iso}. The VM specifications are summarised in 
+    installed from the same ISO image and accessed at \url{https://releases.ubuntu.com/26.04/ubuntu-26.04-live-server-amd64.iso}. The VM specifications are summarised in
     Table~\ref{tab:vmspecs}.
 
     \begin{table}[H]
@@ -278,20 +294,26 @@
     \hline
     vCPUs            & 4 \\
     RAM              & 8 GB \\
-    Disk size        & 50 GB (fixed/pre-allocated) \\
-    Disk controller  & SATA \\
-    Firmware         & BIOS \\
+    Disk size        & 50 GB \\
+    Disk allocation  & Fixed size \\
+    Disk controller  & SCSI \\
+    Firmware         & UEFI \\
     Guest OS         & Ubuntu Server 26.04 LTS \\
+    Secure Boot      & Disabled \\
+    Swap             & Disabled \\
     \hline
     \end{tabular}
     \end{table}
 
     \noindent The disk was allocated as a fixed size image on both hypervisors rather than
     dynamically allocated, to eliminate allocation time overhead from
-    influencing I/O benchmark results. The same disk controller type (SATA) was
-    used on both VMs to avoid introducing paravirtualised driver advantages. By default,
-    Proxmox VE pre-configures with VirtIO SCSI, which would give it an
-    unfair I/O advantage and confound the comparison.\\
+    influencing I/O benchmark results. SCSI was used as the disk controller
+    on both VMs to ensure a consistent, stable controller baseline. VirtualBox uses 
+    an emulated LsiLogic SCSI controller \parencite{Chapter5Virtual}, 
+    while Hyper-V Generation 2 uses a fully synthetic SCSI controller via VMBus 
+    \parencite{johnHowardHyperVGeneration2}. Both were selected as the closest comparable 
+    storage controllers available on their respective hypervisors, to minimise architectural 
+    differences between the two configurations.\\
     \\
     \noindent Swap was disabled on both VMs prior to benchmarking (\texttt{sudo swapoff
     -a}) to ensure that memory benchmark results reflect RAM throughput
@@ -302,8 +324,8 @@
     Two common benchmarking tools were used:
 
     \begin{itemize}
-        \item \textbf{sysbench} — used for CPU and memory benchmarks. For the purpose of this experiment, the version used was $1.0.20$.
-        \item \textbf{fio} — used for disk I/O benchmarks. For the purpose of this experiment, the version used was $3.41$.
+        \item \textbf{sysbench}. Used for CPU and memory benchmarks. For the purpose of this experiment, the version used was $1.0.20$.
+        \item \textbf{fio}. Used for disk I/O benchmarks. For the purpose of this experiment, the version used was $3.41$.
     \end{itemize}
 
     \noindent Both tools were installed from the Ubuntu package repositories on each VM
@@ -329,13 +351,14 @@
     \end{lstlisting}
 
     \noindent The \texttt{--threads=4} parameter matches the vCPU allocation of each VM,
-    and the test duration was fixed at 60 seconds.
+    and the test duration was fixed at 60 seconds. The value of 20{,}000 was selected 
+    as it is a widely used upper bound in sysbench CPU benchmark.
 
     \subsubsection{Memory Benchmark}
 
-    The sysbench memory benchmark was used to measure memory subsystem
-    throughput. The test performs sequential read and write operations using
-    1 MB blocks until a total transfer of 10 GB has been completed, reporting
+    The sysbench memory benchmark was used to measure memory subsystem throughput. 
+    The test performs sequential write operations to memory using 1\,MB blocks until 
+    a total transfer of 10\,GB has been completed using 4 threads, reporting 
     throughput in MiB/s.
 
     \begin{lstlisting}[caption={sysbench memory benchmark command.}]
@@ -344,10 +367,9 @@
 
     \subsubsection{Disk I/O Benchmark}
 
-    Disk I/O performance was evaluated using fio with 4K random read and
-    random write workloads, as small random I/O is the pattern most sensitive
-    to hypervisor overhead. The I/O engine used was libaio (Linux
-    asynchronous I/O), with 4 parallel jobs matching the vCPU count.\\
+    Disk I/O performance was evaluated using fio with a commonly used value of 4K
+    for both random read and random write workloads. The I/O engine used was libaio 
+    (Linux asynchronous I/O), with 4 parallel jobs matching the vCPU count.\\
     \\
     \noindent A throwaway fio run was performed before each workload type to prepare
     the disk cache, ensuring that subsequent measurements reflect steady I/O
@@ -355,7 +377,7 @@
     name as the benchmark it precedes so that fio reuses the pre-created files
     during the actual benchmark runs. After the random read warmup and five
     benchmark runs, the randread files were deleted before performing the
-    random write warmup.
+    random write warmup. \\
 
     \begin{lstlisting}[caption={fio random read benchmark command.}]
     fio --name=randread --ioengine=libaio --rw=randread \
@@ -386,13 +408,13 @@
     vCPU count          & 4 on both VMs \\
     RAM allocation      & 8 GB on both VMs \\
     Disk size           & 50 GB fixed allocation on both VMs \\
-    Disk controller     & SATA on both VMs \\
-    Firmware type       & BIOS on both VMs \\
+    Disk controller     & SCSI on both VMs \\
+    Firmware type       & UEFI on both VMs \\
     Swap               & Disabled on both VMs \\
     Concurrent load     & No other VMs or applications running \\
     Idle period         & 2 minutes post-boot before each test session \\
     Benchmark commands  & Identical commands on both VMs \\
-    Run count           & 5 runs per benchmark; arithmetic mean reported \\
+    Run count           & 5 runs per benchmark\\
     \hline
     \end{tabular}
     \end{table}
@@ -401,13 +423,13 @@
     \subsection{Visualisation Methodology}
 
     Each benchmark subsection presents results using a radar chart, which allows
-    multiple heterogeneous performance metrics to be compared simultaneously on a
-    single figure. Because the metrics differ in unit and magnitude, all values are
-    normalised to the dimensionless range $[0, 1]$ before plotting.\\ 
+    multiple performance metrics to be compared simultaneously on a single figure. 
+    Because some of the metrics can differ in unit and magnitude, all values are
+    normalised to the range $[0, 1]$ before plotting.\\
     \\
     \noindent Let $m_i$ denote the arithmetic mean of metric $i$ across the five benchmark
     runs, and let $R_i > 0$ be a predefined reference maximum for that metric.
-    The normalised score $\hat{s}_i$ is given by:
+    The normalised score $\hat{s}_i$ is given by
 
     \begin{equation}
         \hat{s}_i = \frac{m_i}{R_i},\text{ where }\hat{s}_i \in [0, 1]
@@ -416,22 +438,23 @@
 
     \noindent The reference maximum $R_i$ for each metric is chosen as a
     conservative upper bound that strictly exceeds all observed values across both
-    hypervisor configurations, i.e.:
+    hypervisor configurations, that is
 
     \begin{equation}
-        R_i = \kappa \cdot \max\bigl(m_i^{\,\text{VBox}},\; m_i^{\,\text{Proxmox}}\bigr),
+        R_i = \kappa \cdot \max\bigl(m_i^{\,\text{VBox}},\; m_i^{\,\text{Hyper-V}}\bigr),
         \text{ where }\kappa > 1
         \label{eq:refmax}
     \end{equation}
 
-    \noindent where $\kappa$ is a headroom factor chosen such that no data point
-    saturates its axis, ensuring the full scale of the chart remains interpretable.
-    The identical reference maxima are applied to both hypervisors, guaranteeing
-    that the two polygons are directly comparable.\\
+    \noindent \noindent where $\kappa > 1$ is chosen such that no data point saturates its 
+    axis, ensuring the full scale of the chart remains interpretable.
+    Applying identical reference maxima to both hypervisors ensures that each axis 
+    represents the same absolute scale for both, making the two polygons directly 
+    comparable.\\
     \\
-    \noindent For metrics where a lower value indicates better performance (e.g.\
+    \noindent For metrics where a lower value indicates better performance (e.g. 
     latency, standard deviation), the score is inverted so that a larger enclosed
-    polygon area consistently represents superior performance across all axes:
+    polygon area consistently represents the better performance. Namely,
 
     \begin{equation}
         \hat{s}_i^{\,\text{inv}} = 1 - \hat{s}_i = 1 - \frac{m_i}{R_i}
@@ -446,103 +469,20 @@
     \begin{figure}[H]
     \centering
     \begin{tikzpicture}[scale=2.2]
-      \def\N{5}
-      \def\R{1.0} 
-      \def\levels{5}
-
-      \def\LabA{Events/sec}
-      \def\LabB{Avg Latency}
-      \def\LabC{95th\% Lat}
-      \def\LabD{Max Latency}
-      \def\LabE{Events Stddev}
-
-      \def\vboxA{0.878}
-      \def\vboxB{0.675}
-      \def\vboxC{0.629}
-      \def\vboxD{0.740}
-      \def\vboxE{0.620}
-
-      \def\pmxA{0.0}
-      \def\pmxB{0.0}
-      \def\pmxC{0.0}
-      \def\pmxD{0.0}
-      \def\pmxE{0.0}
-
-      \def\angleA{90}
-      \def\angleB{162}
-      \def\angleC{234}
-      \def\angleD{306}
-      \def\angleE{18}
-
-      \foreach \lvl in {1,...,\levels}{
-        \pgfmathsetmacro{\r}{\lvl/\levels*\R}
-        \draw[gray!40, thin] 
-          ({\r*cos(\angleA)}, {\r*sin(\angleA)}) --
-          ({\r*cos(\angleB)}, {\r*sin(\angleB)}) --
-          ({\r*cos(\angleC)}, {\r*sin(\angleC)}) --
-          ({\r*cos(\angleD)}, {\r*sin(\angleD)}) --
-          ({\r*cos(\angleE)}, {\r*sin(\angleE)}) -- cycle;
-        \node[gray!70, font=\tiny] at ({0.03}, {\r+0.03}) {\pgfmathprintnumber[fixed,precision=1]{\r}};
-      }
-
-      \foreach \ang in {\angleA,\angleB,\angleC,\angleD,\angleE}{
-        \draw[gray!60, thin] (0,0) -- ({\R*cos(\ang)}, {\R*sin(\ang)});
-      }
-
-      \pgfmathsetmacro{\labelR}{\R+0.18}
-      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleA)}, {\labelR*sin(\angleA)+0.05}) {\LabA};
-      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleB)-0.12}, {\labelR*sin(\angleB)}) {\LabB};
-      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleC)-0.10}, {\labelR*sin(\angleC)}) {\LabC};
-      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleD)+0.10}, {\labelR*sin(\angleD)}) {\LabD};
-      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleE)+0.12}, {\labelR*sin(\angleE)}) {\LabE};
-
-      \draw[tugblue, thick, fill=tugblue, fill opacity=0.25]
-        ({\vboxA*cos(\angleA)}, {\vboxA*sin(\angleA)}) --
-        ({\vboxB*cos(\angleB)}, {\vboxB*sin(\angleB)}) --
-        ({\vboxC*cos(\angleC)}, {\vboxC*sin(\angleC)}) --
-        ({\vboxD*cos(\angleD)}, {\vboxD*sin(\angleD)}) --
-        ({\vboxE*cos(\angleE)}, {\vboxE*sin(\angleE)}) -- cycle;
-
-      \foreach \score/\ang in {\vboxA/\angleA, \vboxB/\angleB, \vboxC/\angleC, \vboxD/\angleD, \vboxE/\angleE}{
-        \filldraw[tugblue] ({\score*cos(\ang)}, {\score*sin(\ang)}) circle (1.2pt);
-      }
-
-      \fill[tugblue, opacity=0.4] (-1.05,-1.30) rectangle (-0.85,-1.20);
-      \draw[tugblue, thick]       (-1.05,-1.30) rectangle (-0.85,-1.20);
-      \node[right, font=\small] at (-0.83,-1.25) {VirtualBox (mean of 5 runs)};
-
-    \end{tikzpicture}
-    \caption{VirtualBox CPU benchmark performance radar chart.}
-    \label{fig:cpu-radar}
-    \end{figure}
-
-    \noindent Figure~\ref{fig:cpu-radar} shows the normalised performance profile of
-    VirtualBox across five CPU metrics. Scores are computed using
-    Equations~\eqref{eq:normalise}--\eqref{eq:invert}, with the following reference
-    maxima: Events/sec $R = 7{,}000$; Average Latency $R = 2$\,ms; 95th Percentile
-    Latency $R = 2$\,ms; Maximum Latency $R = 20$\,ms; Standard Deviation $R = 500$.
-    Latency and standard deviation axes are inverted per Equation~\eqref{eq:invert},
-    such that a larger enclosed area indicates better overall performance.
-    \subsection{Memory Benchmarks}
-
-    \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[scale=2.2]
-
       \def\R{1.0}
       \def\levels{5}
 
-      \def\vboxA{0.724}
-      \def\vboxB{0.660}
-      \def\vboxC{0.520}
-      \def\vboxD{0.793}
-      \def\vboxE{0.880}
+      \def\vboxA{0.887}
+      \def\vboxB{0.679}
+      \def\vboxC{0.650}
+      \def\vboxD{0.601}
+      \def\vboxE{0.267}
 
-      \def\pmxA{0.0}
-      \def\pmxB{0.0}
-      \def\pmxC{0.0}
-      \def\pmxD{0.0}
-      \def\pmxE{0.0}
+      \def\hvA{0.851}
+      \def\hvB{0.664}
+      \def\hvC{0.493}
+      \def\hvD{0.886}
+      \def\hvE{0.776}
 
       \def\angleA{90}
       \def\angleB{162}
@@ -566,11 +506,11 @@
       }
 
       \pgfmathsetmacro{\labelR}{\R+0.18}
-      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleA)},   {\labelR*sin(\angleA)+0.05})  {Throughput};
-      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleB)-0.10}, {\labelR*sin(\angleB)})   {Avg Latency};
-      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleC)-0.08}, {\labelR*sin(\angleC)})   {95th\% Lat};
-      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleD)+0.10}, {\labelR*sin(\angleD)})   {Max Latency};
-      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleE)+0.10}, {\labelR*sin(\angleE)})   {Exec Stddev};
+      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleA)},        {\labelR*sin(\angleA)+0.05}) {Events/sec};
+      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleB)-0.12},   {\labelR*sin(\angleB)})      {Avg Latency};
+      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleC)-0.10},   {\labelR*sin(\angleC)})      {95th\% Lat};
+      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleD)+0.10},   {\labelR*sin(\angleD)})      {Max Latency};
+      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleE)+0.12},   {\labelR*sin(\angleE)})      {Events Stddev};
 
       \draw[tugblue, thick, fill=tugblue, fill opacity=0.25]
         ({\vboxA*cos(\angleA)}, {\vboxA*sin(\angleA)}) --
@@ -578,27 +518,171 @@
         ({\vboxC*cos(\angleC)}, {\vboxC*sin(\angleC)}) --
         ({\vboxD*cos(\angleD)}, {\vboxD*sin(\angleD)}) --
         ({\vboxE*cos(\angleE)}, {\vboxE*sin(\angleE)}) -- cycle;
-
       \foreach \score/\ang in {\vboxA/\angleA,\vboxB/\angleB,\vboxC/\angleC,\vboxD/\angleD,\vboxE/\angleE}{
         \filldraw[tugblue] ({\score*cos(\ang)}, {\score*sin(\ang)}) circle (1.2pt);
       }
 
-      \fill[tugblue, opacity=0.4] (-1.05,-1.30) rectangle (-0.85,-1.20);
-      \draw[tugblue, thick]       (-1.05,-1.30) rectangle (-0.85,-1.20);
+      \draw[hypervred, thick, fill=hypervred, fill opacity=0.20]
+        ({\hvA*cos(\angleA)}, {\hvA*sin(\angleA)}) --
+        ({\hvB*cos(\angleB)}, {\hvB*sin(\angleB)}) --
+        ({\hvC*cos(\angleC)}, {\hvC*sin(\angleC)}) --
+        ({\hvD*cos(\angleD)}, {\hvD*sin(\angleD)}) --
+        ({\hvE*cos(\angleE)}, {\hvE*sin(\angleE)}) -- cycle;
+      \foreach \score/\ang in {\hvA/\angleA,\hvB/\angleB,\hvC/\angleC,\hvD/\angleD,\hvE/\angleE}{
+        \filldraw[hypervred] ({\score*cos(\ang)}, {\score*sin(\ang)}) circle (1.2pt);
+      }
+
+      \fill[tugblue, opacity=0.4]  (-1.05,-1.30) rectangle (-0.85,-1.20);
+      \draw[tugblue, thick]        (-1.05,-1.30) rectangle (-0.85,-1.20);
       \node[right, font=\small] at (-0.83,-1.25) {VirtualBox (mean of 5 runs)};
 
+      \fill[hypervred, opacity=0.4] (-1.05,-1.50) rectangle (-0.85,-1.40);
+      \draw[hypervred, thick]       (-1.05,-1.50) rectangle (-0.85,-1.40);
+      \node[right, font=\small] at  (-0.83,-1.45) {Hyper-V (mean of 5 runs)};
+
     \end{tikzpicture}
-    \caption{VirtualBox memory benchmark performance radar chart.}
+    \caption{CPU benchmark performance radar chart.}
+    \label{fig:cpu-radar}
+    \end{figure}
+
+    \noindent Figure~\ref{fig:cpu-radar} shows the normalised performance profiles of
+    both hypervisors across five chosen CPU metrics. Furthermore, the following reference
+    maxima were chosen: events/sec $R = 7{,}000$, average latency $R = 2$\,ms, 95th percentile
+    latency $R = 2$\,ms, maximum latency $R = 20$\,ms, standard deviation $R = 700$.
+    Latency and standard deviation axes are inverted per equation~\eqref{eq:invert},
+    such that a larger enclosed area indicates better performance.
+
+    \begin{table}[H]
+    \centering
+    \caption{CPU benchmark mean comparison (VirtualBox vs Hyper-V).}
+    \label{tab:cpu-compare}
+    \begin{tabular}{lrrrr}
+    \hline
+    \textbf{Metric} & \textbf{VirtualBox (mean)} & \textbf{Hyper-V (mean)} & \textbf{Difference} & \textbf{Difference (\%)} \\
+    \hline
+    Events/sec       & 6206.11      & 5958.36    & $-247.75$    & $-3.99\%$ \\
+    Total Events     & 372375       & 357510     & $-14865$     & $-3.99\%$ \\
+    Min Latency (ms) & 0.62         & 0.62       & $0.00$       & $0.00\%$  \\
+    Avg Latency (ms) & 0.642        & 0.672      & $+0.030$     & $+4.67\%$ \\
+    Max Latency (ms) & 7.98         & 2.29       & $-5.69$      & $-71.30\%$ \\
+    95th\% Lat (ms)  & 0.700        & 1.014      & $+0.314$     & $+44.86\%$ \\
+    Events Stddev    & 513.20       & 156.65     & $-356.55$    & $-69.47\%$ \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+    \noindent Differences are reported as Hyper-V minus VirtualBox. A negative value 
+    indicates VirtualBox is higher, a positive value indicates Hyper-V is higher. 
+    For latency and standard deviation metrics, lower values are better.
+
+    \subsection{Memory Benchmarks}
+
+    \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=2.2]
+
+      \def\R{1.0}
+      \def\levels{5}
+
+      \def\vboxA{0.810}
+      \def\vboxB{0.700}
+      \def\vboxC{0.600}
+      \def\vboxD{0.943}
+      \def\vboxE{1.000}
+
+      \def\hvA{0.744}
+      \def\hvB{0.640}
+      \def\hvC{0.420}
+      \def\hvD{0.970}
+      \def\hvE{1.000}
+
+      \def\angleA{90}
+      \def\angleB{162}
+      \def\angleC{234}
+      \def\angleD{306}
+      \def\angleE{18}
+
+      \foreach \lvl in {1,...,\levels}{
+        \pgfmathsetmacro{\r}{\lvl/\levels*\R}
+        \draw[gray!40, thin]
+          ({\r*cos(\angleA)}, {\r*sin(\angleA)}) --
+          ({\r*cos(\angleB)}, {\r*sin(\angleB)}) --
+          ({\r*cos(\angleC)}, {\r*sin(\angleC)}) --
+          ({\r*cos(\angleD)}, {\r*sin(\angleD)}) --
+          ({\r*cos(\angleE)}, {\r*sin(\angleE)}) -- cycle;
+        \node[gray!70, font=\tiny] at ({0.03}, {\r+0.03}) {\pgfmathprintnumber[fixed,precision=1]{\r}};
+      }
+
+      \foreach \ang in {\angleA,\angleB,\angleC,\angleD,\angleE}{
+        \draw[gray!60, thin] (0,0) -- ({\R*cos(\ang)}, {\R*sin(\ang)});
+      }
+
+      \pgfmathsetmacro{\labelR}{\R+0.18}
+      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleA)},        {\labelR*sin(\angleA)+0.05}) {Throughput};
+      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleB)-0.10},   {\labelR*sin(\angleB)})      {Avg Latency};
+      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleC)-0.08},   {\labelR*sin(\angleC)})      {95th\% Lat};
+      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleD)+0.10},   {\labelR*sin(\angleD)})      {Max Latency};
+      \node[font=\small\bfseries, align=center] at ({\labelR*cos(\angleE)+0.10},   {\labelR*sin(\angleE)})      {Exec Stddev};
+
+      \draw[tugblue, thick, fill=tugblue, fill opacity=0.25]
+        ({\vboxA*cos(\angleA)}, {\vboxA*sin(\angleA)}) --
+        ({\vboxB*cos(\angleB)}, {\vboxB*sin(\angleB)}) --
+        ({\vboxC*cos(\angleC)}, {\vboxC*sin(\angleC)}) --
+        ({\vboxD*cos(\angleD)}, {\vboxD*sin(\angleD)}) --
+        ({\vboxE*cos(\angleE)}, {\vboxE*sin(\angleE)}) -- cycle;
+      \foreach \score/\ang in {\vboxA/\angleA,\vboxB/\angleB,\vboxC/\angleC,\vboxD/\angleD,\vboxE/\angleE}{
+        \filldraw[tugblue] ({\score*cos(\ang)}, {\score*sin(\ang)}) circle (1.2pt);
+      }
+
+      \draw[hypervred, thick, fill=hypervred, fill opacity=0.20]
+        ({\hvA*cos(\angleA)}, {\hvA*sin(\angleA)}) --
+        ({\hvB*cos(\angleB)}, {\hvB*sin(\angleB)}) --
+        ({\hvC*cos(\angleC)}, {\hvC*sin(\angleC)}) --
+        ({\hvD*cos(\angleD)}, {\hvD*sin(\angleD)}) --
+        ({\hvE*cos(\angleE)}, {\hvE*sin(\angleE)}) -- cycle;
+      \foreach \score/\ang in {\hvA/\angleA,\hvB/\angleB,\hvC/\angleC,\hvD/\angleD,\hvE/\angleE}{
+        \filldraw[hypervred] ({\score*cos(\ang)}, {\score*sin(\ang)}) circle (1.2pt);
+      }
+
+      \fill[tugblue, opacity=0.4]  (-1.05,-1.30) rectangle (-0.85,-1.20);
+      \draw[tugblue, thick]        (-1.05,-1.30) rectangle (-0.85,-1.20);
+      \node[right, font=\small] at (-0.83,-1.25) {VirtualBox (mean of 5 runs)};
+
+      \fill[hypervred, opacity=0.4] (-1.05,-1.50) rectangle (-0.85,-1.40);
+      \draw[hypervred, thick]       (-1.05,-1.50) rectangle (-0.85,-1.40);
+      \node[right, font=\small] at  (-0.83,-1.45) {Hyper-V (mean of 5 runs)};
+
+    \end{tikzpicture}
+    \caption{Memory benchmark performance radar chart (VirtualBox vs Hyper-V).}
     \label{fig:mem-radar}
     \end{figure}
 
-    \noindent Figure~\ref{fig:mem-radar} shows the normalised memory performance
-    profile of VirtualBox across five metrics. Scores are computed using
-    Equations~\eqref{eq:normalise}--\eqref{eq:invert}, with the following reference
-    maxima: Throughput $R = 120{,}000$\,MiB/s; Average Latency $R = 0.10$\,ms;
-    95th Percentile Latency $R = 0.10$\,ms; Maximum Latency $R = 15$\,ms;
-    Execution Standard Deviation $R = 0.05$. Latency and standard deviation axes
-    are inverted per Equation~\eqref{eq:invert}.
+    \noindent Figure~\ref{fig:mem-radar} shows the normalised performance profiles of
+    both hypervisors across five chosen memory metrics. Furthermore, the following reference
+    maxima were chosen: throughput $R = 140{,}000$\,MiB/s, average latency $R = 0.10$\,ms,
+    95th percentile latency $R = 0.10$\,ms, maximum latency $R = 15$\,ms,
+    execution standard deviation $R = 0.05$.
+    Latency and standard deviation axes are inverted per equation~\eqref{eq:invert},
+    such that a larger enclosed area indicates better performance.
+
+    \begin{table}[H]
+    \centering
+    \caption{Memory benchmark mean comparison (VirtualBox vs Hyper-V).}
+    \label{tab:mem-compare}
+    \begin{tabular}{lrrrr}
+    \hline
+    \textbf{Metric} & \textbf{VirtualBox (mean)} & \textbf{Hyper-V (mean)} & \textbf{Difference} & \textbf{Difference (\%)} \\
+    \hline
+    Throughput (MiB/s) & 113389.76 & 104110.83 & $-9278.93$  & $-8.18\%$ \\
+    Min Latency (ms)   & 0.020     & 0.020     & $0.000$     & $0.00\%$  \\
+    Avg Latency (ms)   & 0.030     & 0.036     & $+0.006$    & $+20.00\%$ \\
+    Max Latency (ms)   & 0.860     & 0.450     & $-0.410$    & $-47.67\%$ \\
+    95th\% Lat (ms)    & 0.040     & 0.058     & $+0.018$    & $+45.00\%$ \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+    \noindent Differences are reported as Hyper-V minus VirtualBox. A negative value indicates VirtualBox is higher, a positive value indicates Hyper-V is higher. For latency metrics, lower values are better.
 
     \subsection{Disk I/O Benchmarks}
 
@@ -609,19 +693,19 @@
       \def\R{1.0}
       \def\levels{5}
 
-      \def\vboxA{0.567}
-      \def\vboxB{0.568}
-      \def\vboxC{0.533}
-      \def\vboxD{0.425}
-      \def\vboxE{0.455}
-      \def\vboxF{0.599}
+      \def\vboxA{0.492}
+      \def\vboxB{0.493}
+      \def\vboxC{0.456}
+      \def\vboxD{0.699}
+      \def\vboxE{0.700}
+      \def\vboxF{0.524}
 
-      \def\pmxA{0.0}
-      \def\pmxB{0.0}
-      \def\pmxC{0.0}
-      \def\pmxD{0.0}
-      \def\pmxE{0.0}
-      \def\pmxF{0.0}
+      \def\hvA{0.797}
+      \def\hvB{0.798}
+      \def\hvC{0.505}
+      \def\hvD{0.482}
+      \def\hvE{0.483}
+      \def\hvF{0.282}
 
       \def\angleA{90}
       \def\angleB{150}
@@ -661,30 +745,194 @@
         ({\vboxD*cos(\angleD)}, {\vboxD*sin(\angleD)}) --
         ({\vboxE*cos(\angleE)}, {\vboxE*sin(\angleE)}) --
         ({\vboxF*cos(\angleF)}, {\vboxF*sin(\angleF)}) -- cycle;
-
       \foreach \score/\ang in {\vboxA/\angleA,\vboxB/\angleB,\vboxC/\angleC,\vboxD/\angleD,\vboxE/\angleE,\vboxF/\angleF}{
         \filldraw[tugblue] ({\score*cos(\ang)}, {\score*sin(\ang)}) circle (1.2pt);
       }
 
-      \fill[tugblue, opacity=0.4] (-1.05,-1.75) rectangle (-0.85,-1.65);
-      \draw[tugblue, thick]       (-1.05,-1.75) rectangle (-0.85,-1.65);
+      \draw[hypervred, thick, fill=hypervred, fill opacity=0.20]
+        ({\hvA*cos(\angleA)}, {\hvA*sin(\angleA)}) --
+        ({\hvB*cos(\angleB)}, {\hvB*sin(\angleB)}) --
+        ({\hvC*cos(\angleC)}, {\hvC*sin(\angleC)}) --
+        ({\hvD*cos(\angleD)}, {\hvD*sin(\angleD)}) --
+        ({\hvE*cos(\angleE)}, {\hvE*sin(\angleE)}) --
+        ({\hvF*cos(\angleF)}, {\hvF*sin(\angleF)}) -- cycle;
+      \foreach \score/\ang in {\hvA/\angleA,\hvB/\angleB,\hvC/\angleC,\hvD/\angleD,\hvE/\angleE,\hvF/\angleF}{
+        \filldraw[hypervred] ({\score*cos(\ang)}, {\score*sin(\ang)}) circle (1.2pt);
+      }
+
+      \fill[tugblue, opacity=0.4]  (-1.05,-1.75) rectangle (-0.85,-1.65);
+      \draw[tugblue, thick]        (-1.05,-1.75) rectangle (-0.85,-1.65);
       \node[right, font=\small] at (-0.83,-1.70) {VirtualBox (mean of 5 runs)};
 
+      \fill[hypervred, opacity=0.4] (-1.05,-1.95) rectangle (-0.85,-1.85);
+      \draw[hypervred, thick]       (-1.05,-1.95) rectangle (-0.85,-1.85);
+      \node[right, font=\small] at  (-0.83,-1.90) {Hyper-V (mean of 5 runs)};
+
     \end{tikzpicture}
-    \caption{VirtualBox disk I/O benchmark performance radar chart.}
+    \caption{Disk I/O benchmark performance radar chart (VirtualBox vs Hyper-V).}
     \label{fig:io-radar}
     \end{figure}
 
-    \noindent Figure~\ref{fig:io-radar} shows the normalised disk I/O performance
-    profile of VirtualBox across six metrics covering both random read and random
-    write workloads. Scores are computed using
-    Equations~\eqref{eq:normalise}--\eqref{eq:invert}, with the following reference
-    maxima: Read IOPS $R = 500$; Read Bandwidth $R = 2{,}000$\,KiB/s; Read
-    Completion Latency $R = 30{,}000\,\mu$s; Write IOPS $R = 400$; Write Bandwidth
-    $R = 1{,}500$\,KiB/s; Write Completion Latency $R = 60{,}000\,\mu$s.
-    Completion latency axes are inverted per Equation~\eqref{eq:invert}.
+    \noindent Figure~\ref{fig:io-radar} shows the normalised performance profiles of
+    both hypervisors across six chosen disk I/O metrics covering both random read and
+    random write workloads. Furthermore, the following reference
+    maxima were chosen: read IOPS $R = 1{,}000$, read bandwidth $R = 4{,}000$\,KiB/s, read
+    completion latency $R = 15{,}000\,\mu$s, write IOPS $R = 300$, write bandwidth
+    $R = 1{,}200$\,KiB/s, write completion latency $R = 40{,}000\,\mu$s.
+    Completion latency axes are inverted per equation~\eqref{eq:invert},
+    such that a larger enclosed area indicates better performance.
+
+    \begin{table}[H]
+    \centering
+    \caption{Disk I/O random read benchmark mean comparison (VirtualBox vs Hyper-V).}
+    \label{tab:io-read-compare}
+    \begin{tabular}{lrrrr}
+    \hline
+    \textbf{Metric} & \textbf{VirtualBox (mean)} & \textbf{Hyper-V (mean)} & \textbf{Difference} & \textbf{Difference (\%)} \\
+    \hline
+    IOPS              & 492.2       & 797.0       & $+304.8$      & $+61.93\%$ \\
+    BW (KiB/s)        & 1970.8      & 3190.0      & $+1219.2$     & $+61.86\%$ \\
+    Avg BW (KiB/s)    & 1975.95     & 4606.13     & $+2630.18$    & $+133.11\%$ \\
+    Avg IOPS          & 492.58      & 1151.52     & $+658.94$     & $+133.79\%$ \\
+    BW Stdev (KiB/s)  & 143.08      & 1110.80     & $+967.72$     & $+676.35\%$ \\
+    IOPS Stdev        & 35.81       & 277.68      & $+241.87$     & $+675.26\%$ \\
+    Avg Clat ($\mu$s) & 8158.80     & 7425.41     & $-733.39$     & $-8.99\%$ \\
+    Clat Stdev ($\mu$s) & 15333.17  & 21167.46    & $+5834.29$    & $+38.05\%$ \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+    \begin{table}[H]
+    \centering
+    \caption{Disk I/O random write benchmark mean comparison (VirtualBox vs Hyper-V).}
+    \label{tab:io-write-compare}
+    \begin{tabular}{lrrrr}
+    \hline
+    \textbf{Metric} & \textbf{VirtualBox (mean)} & \textbf{Hyper-V (mean)} & \textbf{Difference} & \textbf{Difference (\%)} \\
+    \hline
+    IOPS              & 209.6       & 144.6       & $-65.0$       & $-31.01\%$ \\
+    BW (KiB/s)        & 840.2       & 580.0       & $-260.2$      & $-30.97\%$ \\
+    Avg BW (KiB/s)    & 6275.11     & 671.36      & $-5603.75$    & $-89.30\%$ \\
+    Avg IOPS          & 1567.51     & 167.83      & $-1399.68$    & $-89.29\%$ \\
+    BW Stdev (KiB/s)  & 1162.47     & 142.33      & $-1020.14$    & $-87.76\%$ \\
+    IOPS Stdev        & 290.66      & 35.58       & $-255.08$     & $-87.76\%$ \\
+    Avg Clat ($\mu$s) & 19057.61    & 28701.77    & $+9644.16$    & $+50.61\%$ \\
+    Clat Stdev ($\mu$s) & 286258.54 & 95158.01    & $-191100.53$  & $-66.76\%$ \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+    \noindent Differences are reported as Hyper-V minus VirtualBox. A negative value 
+    indicates VirtualBox is higher, a positive value indicates Hyper-V is higher. 
+    For completion latency and standard deviation metrics, lower values are better.
     \section{Discussion}
+
+    \subsection{CPU Performance}
+
+    VirtualBox achieved a slightly higher mean throughput of 6{,}206 events/sec compared
+    to Hyper-V's 5{,}958 events/sec, a difference of roughly 4\%. Hyper-V, however,
+    produced considerably more consistent results: its maximum observed latency was 
+    2.29\,ms versus VirtualBox's 7.98\,ms, and its standard deviation of events across 
+    runs was nearly 70\% lower. In other words, VirtualBox was marginally faster on 
+    average, but Hyper-V behaved more predictably every run.\\
+    \\
+    \noindent This pattern is consistent with findings in the literature. Giallorenzo et 
+    al., benchmarking CPU performance across multiple virtualisation technologies using 
+    Dhrystone and Whetstone have found that type-2 hypervisors performed within a few percent
+    of bare-metal for both integer and floating-point workloads, with no category 
+    decisively outperforming the other \parencite{giallorenzoVirtualizationCostsBenchmarking2021}. The narrow throughput gap observed here follows 
+    the same pattern. Under purely arithmetic workloads, hardware-assisted 
+    virtualisation allows the guest to execute calculations directly on the physical 
+    processor, meaning the additional software layer beneath a type-2 hypervisor makes 
+    little practical difference to throughput. The greater run consistency 
+    observed in Hyper-V, hovewer, aligns with a known benefit of type-1 architectures, 
+    where the guest is not competing with a host OS for CPU scheduling time.
+
+    \subsection{Memory Performance}
+
+    VirtualBox recorded a mean memory throughput of 113{,}390\,MiB/s, 
+    an 8.2\% advantage over Hyper-V's 104{,}111\,MiB/s. Hyper-V showed slightly higher average and
+    95th percentile latency, though it achieved a lower maximum latency. 
+    Across the memory metrics, VirtualBox consistently came out marginally ahead.\\
+    \\
+    \noindent This result may seem surprising given that Hyper-V is a type-1 hypervisor, but prior
+    work shows that memory performance does not follow a simple type-1 versus type-2
+    pattern. Giallorenzo et al. tested VMs using the RAMspeed tool across six 
+    virtualisation technologies and has found that memory performance
+    was largely unaffected by virtualisation overhead regardless of hypervisor type,
+    with most technologies matching or slightly exceeding bare-metal and only
+    VirtualBox showing a modest drop of around 5\% \parencite{giallorenzoVirtualizationCostsBenchmarking2021}. 
+    Their results suggest that memory throughput is influenced more by how a given 
+    implementation manages address translation and cache access than by architectural category alone \parencite{giallorenzoVirtualizationCostsBenchmarking2021}. 
+    A plausible explanation in our case is that VirtualBox, running on top of Windows 11, 
+    benefits from memory already mapped by the host OS, reducing some address translation overhead
+    for bulk sequential memory transfers within the virtual machine.
+
+    \subsection{Disk I/O Performance}
+
+    The disk results showed a clear split between read and write workloads. For random 
+    reads, Hyper-V substantially outperformed VirtualBox, delivering 797 IOPS compared 
+    to 492 IOPS, an advantage of 62\%. For random writes, VirtualBox came out ahead with 
+    210 IOPS against Hyper-V's 145 IOPS, with an advantage of 31\%. Hyper-V also had noticeably worse 
+    average write completion latency of 28{,}702\,$\mu$s compared to 19{,}058\,$\mu$s on the VirtualBox.\\
+    \\
+    \noindent The read advantage for Hyper-V aligns with what other researchers have 
+    found. Giallorenzo et al. compared multiple virtualisation technologies using 
+    Bonnie++ and DBENCH, finding that type-1 hypervisors generally delivered more 
+    consistent block I/O read performance, attributed to a more direct path to the 
+    hardware \parencite{giallorenzoVirtualizationCostsBenchmarking2021}. Under VirtualBox, 
+    every I/O request must pass through the Windows 11 host OS storage stack before 
+    reaching the disk, introducing additional overhead that limits read throughput.\\
+    \\
+    \noindent The write reversal is unintuitive. Giallorenzo et al. observed 
+    similarly non-linear write behaviour in their results, noting that VirtualBox 
+    outperformed VMWare Workstation on several write benchmark results despite both 
+    being type-2 hypervisors. They attributed this to write buffering differences in 
+    the host OS storage stack \parencite{giallorenzoVirtualizationCostsBenchmarking2021}. 
+    A similar mechanism plausibly explains the write reversal observed here. Namely, the 
+    Windows 11 storage stack buffers short burst writes before committing them to 
+    disk, improving apparent write throughput, while Hyper-V's more direct disk 
+    access enforces stricter write ordering, increasing per write latency.
+
     \section{Conclusion}
+
+    The results demonstrate that the theoretical performance advantage of type-1 
+    hypervisors over type-2 is not uniformly observable in practice. VirtualBox 
+    marginally outperformed Hyper-V across CPU and memory metrics, suggesting that 
+    the additional software layer of a type-2 hypervisor introduces little overhead 
+    for these workloads. The most meaningful difference between the two was observed 
+    in disk I/O. Hyper-V delivered substantially better random read performance, 
+    while VirtualBox delivered substantially better random write performance. 
+    This read/write split reflects the architectural difference between the two 
+    hypervisors more clearly than CPU or memory results alone.\\
+    \\
+    \noindent Additionally, our findings are broadly in line with the benchmarking literature. 
+    Giallorenzo et al. similarly found that differences between virtualisation categories were 
+    workload dependent, with no single architecture dominating across all resource types, 
+    and that results could be especially counterintuitive \parencite{giallorenzoVirtualizationCostsBenchmarking2021}.
+    In particular, memory and disk I/O performance were shown to be influenced by 
+    host buffering and storage stack behaviour, introducing additional factors 
+    independent of hypervisor architecture.\\
+    \\
+    \noindent The practical implication is that the choice between a type-1 and type-2 
+    hypervisor should be guided by the specific workload profile of the intended 
+    application. For read intensive or latency sensitive workloads, Hyper-V's more 
+    direct hardware access offers a measurable advantage. For general purpose or memory 
+    bound workloads, the overhead introduced by VirtualBox's additional software layer 
+    is less significant than the architectural difference between the two hypervisors. 
+    This narrowing of the performance gap is likely a product of decades of optimisation 
+    using techniques such as nested paging and KVM paravirtualisation.
+    \\
+    \noindent The formal requirements laid out by Popek and Goldberg \parencite{popekFormalRequirementsVirtualizable1974} 
+    in 1974 described a world where virtualisation was achieved largely in software, and 
+    the overhead was correspondingly significant. The subsequent introduction of 
+    hardware assisted virtualisation features such as Intel VT-x and AMD-V effectively 
+    collapsed much of the architectural distinction between type-1 and type-2 hypervisors 
+    at the instruction execution level. Where the performance gap between these two 
+    architectural approaches would have been clearly visible in the 1970s and 1980s, 
+    modern hardware optimisations have reduced it to the point where for most workloads
+    it is unlikely to be the deciding factor.
+
     \newpage
     \printbibliography
     \newpage
@@ -701,32 +949,32 @@
     \hline
     \textbf{Run} & \textbf{Events/sec} & \textbf{Total Events} & \textbf{Min Lat (ms)} & \textbf{Avg Lat (ms)} & \textbf{Max Lat (ms)} & \textbf{95th\% (ms)} & \textbf{Events Stddev} \\
     \hline
-    1 & 6138.21 & 368301 & 0.62 & 0.65 & 7.31  & 0.74 & 101.23 \\
-    2 & 6177.91 & 370689 & 0.62 & 0.65 & 2.48  & 0.73 & 159.81 \\
-    3 & 6135.72 & 368153 & 0.62 & 0.65 & 11.05 & 0.75 & 375.66 \\
-    4 & 6161.86 & 369721 & 0.62 & 0.65 & 2.46  & 0.74 & 124.00 \\
-    5 & 6102.55 & 366163 & 0.62 & 0.65 & 2.69  & 0.75 & 189.52 \\
+    1 & 6222.59 & 373364 & 0.62 & 0.64 & 8.95  & 0.69 & 512.34 \\
+    2 & 6124.09 & 367454 & 0.62 & 0.65 & 12.19 & 0.74 & 456.60 \\
+    3 & 6225.11 & 373516 & 0.62 & 0.64 & 6.70  & 0.69 & 525.66 \\
+    4 & 6231.81 & 373917 & 0.62 & 0.64 & 6.44  & 0.69 & 543.40 \\
+    5 & 6226.93 & 373624 & 0.62 & 0.64 & 5.60  & 0.69 & 527.98 \\
     \hline
-    \textbf{Mean} & \textbf{6143.25} & \textbf{368605} & \textbf{0.62} & \textbf{0.65} & \textbf{5.20} & \textbf{0.742} & \textbf{190.04} \\
+    \textbf{Mean} & \textbf{6206.11} & \textbf{372375} & \textbf{0.62} & \textbf{0.642} & \textbf{7.98} & \textbf{0.700} & \textbf{513.20} \\
     \hline
     \end{tabular}
     \end{table}
 
     \begin{table}[H]
     \centering
-    \caption{Proxmox CPU benchmark results (sysbench, 5 runs).}
-    \label{tab:cpu-proxmox}
+    \caption{Hyper-V CPU benchmark results (sysbench, 5 runs).}
+    \label{tab:cpu-hyperv}
     \begin{tabular}{lrrrrrrr}
     \hline
     \textbf{Run} & \textbf{Events/sec} & \textbf{Total Events} & \textbf{Min Lat (ms)} & \textbf{Avg Lat (ms)} & \textbf{Max Lat (ms)} & \textbf{95th\% (ms)} & \textbf{Events Stddev} \\
     \hline
-    1 & & & & & & & \\
-    2 & & & & & & & \\
-    3 & & & & & & & \\
-    4 & & & & & & & \\
-    5 & & & & & & & \\
+    1 & 5977.82 & 358678 & 0.62 & 0.67 & 1.75 & 0.90 & 218.28 \\
+    2 & 5981.75 & 358915 & 0.62 & 0.67 & 3.70 & 0.89 & 173.51 \\
+    3 & 5974.32 & 358468 & 0.62 & 0.67 & 2.40 & 0.97 & 86.89 \\
+    4 & 5946.04 & 356771 & 0.62 & 0.67 & 1.87 & 1.10 & 62.86 \\
+    5 & 5911.87 & 354720 & 0.62 & 0.68 & 1.73 & 1.21 & 241.70 \\
     \hline
-    \textbf{Mean} & & & & & & & \\
+    \textbf{Mean} & \textbf{5958.36} & \textbf{357510} & \textbf{0.62} & \textbf{0.672} & \textbf{2.29} & \textbf{1.014} & \textbf{156.65} \\
     \hline
     \end{tabular}
     \end{table}
@@ -742,32 +990,32 @@
     \hline
     \textbf{Run} & \textbf{Throughput (MiB/s)} & \textbf{Total Ops} & \textbf{Min Lat (ms)} & \textbf{Avg Lat (ms)} & \textbf{Max Lat (ms)} & \textbf{95th\% (ms)} & \textbf{Exec Stddev} \\
     \hline
-    1 & 106235.51 & 10240 & 0.02 & 0.03 & 3.17  & 0.04 & 0.00 \\
-    2 &  67435.16 & 10240 & 0.02 & 0.03 & 0.22  & 0.05 & 0.01 \\
-    3 &  69355.60 & 10240 & 0.02 & 0.03 & 0.19  & 0.04 & 0.01 \\
-    4 & 103618.39 & 10240 & 0.02 & 0.04 & 1.47  & 0.07 & 0.00 \\
-    5 &  87759.48 & 10240 & 0.02 & 0.04 & 10.45 & 0.04 & 0.01 \\
+    1 & 111445.64 & 10240 & 0.02 & 0.03 & 1.57 & 0.04 & 0.00 \\
+    2 & 112116.21 & 10240 & 0.02 & 0.03 & 0.92 & 0.04 & 0.00 \\
+    3 & 116511.03 & 10240 & 0.02 & 0.03 & 0.79 & 0.04 & 0.00 \\
+    4 & 114039.31 & 10240 & 0.02 & 0.03 & 0.37 & 0.04 & 0.00 \\
+    5 & 112836.60 & 10240 & 0.02 & 0.03 & 0.66 & 0.04 & 0.00 \\
     \hline
-    \textbf{Mean} & \textbf{86880.83} & \textbf{10240} & \textbf{0.02} & \textbf{0.034} & \textbf{3.10} & \textbf{0.048} & \textbf{0.006} \\
+    \textbf{Mean} & \textbf{113389.76} & \textbf{10240} & \textbf{0.02} & \textbf{0.030} & \textbf{0.86} & \textbf{0.040} & \textbf{0.000} \\
     \hline
     \end{tabular}
     \end{table}
 
     \begin{table}[H]
     \centering
-    \caption{Proxmox memory benchmark results (sysbench, 5 runs).}
-    \label{tab:mem-proxmox}
+    \caption{Hyper-V memory benchmark results (sysbench, 5 runs).}
+    \label{tab:mem-hyperv}
     \begin{tabular}{lrrrrrrr}
     \hline
     \textbf{Run} & \textbf{Throughput (MiB/s)} & \textbf{Total Ops} & \textbf{Min Lat (ms)} & \textbf{Avg Lat (ms)} & \textbf{Max Lat (ms)} & \textbf{95th\% (ms)} & \textbf{Exec Stddev} \\
     \hline
-    1 & & & & & & & \\
-    2 & & & & & & & \\
-    3 & & & & & & & \\
-    4 & & & & & & & \\
-    5 & & & & & & & \\
+    1 & 120347.52 & 10240 & 0.02 & 0.03 & 1.20 & 0.04 & 0.00 \\
+    2 &  90520.75 & 10240 & 0.02 & 0.04 & 0.27 & 0.07 & 0.00 \\
+    3 &  90520.75 & 10240 & 0.02 & 0.04 & 0.27 & 0.07 & 0.00 \\
+    4 & 101264.21 & 10240 & 0.02 & 0.04 & 0.25 & 0.07 & 0.00 \\
+    5 & 117900.92 & 10240 & 0.02 & 0.03 & 0.24 & 0.04 & 0.00 \\
     \hline
-    \textbf{Mean} & & & & & & & \\
+    \textbf{Mean} & \textbf{104110.83} & \textbf{10240} & \textbf{0.02} & \textbf{0.036} & \textbf{0.45} & \textbf{0.058} & \textbf{0.000} \\
     \hline
     \end{tabular}
     \end{table}
@@ -783,32 +1031,32 @@
     \hline
     \textbf{Run} & \textbf{IOPS} & \textbf{BW (KiB/s)} & \textbf{Avg BW (KiB/s)} & \textbf{Avg IOPS} & \textbf{BW Stdev (KiB/s)} & \textbf{IOPS Stdev} & \textbf{Avg Clat ($\mu$s)} & \textbf{Clat Stdev ($\mu$s)} \\
     \hline
-    1 & 291 & 1167 & 1165.61 & 290.20 & 51.85 & 12.97 & 13608.85 & 14213.95 \\
-    2 & 278 & 1113 & 1114.32 & 277.19 & 52.09 & 13.01 & 14274.81 & 15848.32 \\
-    3 & 269 & 1076 & 1075.96 & 267.15 & 52.86 & 13.24 & 14771.76 & 16303.08 \\
-    4 & 282 & 1130 & 1129.46 & 280.81 & 48.03 & 12.04 & 14048.93 & 14851.57 \\
-    5 & 297 & 1190 & 1191.12 & 296.57 & 55.46 & 13.87 & 13337.12 & 15130.93 \\
+    1 & 450 & 1801 & 1803.18 & 449.37 & 117.83 & 29.50 & 8871.05 & 16321.64 \\
+    2 & 453 & 1815 & 1819.68 & 453.39 & 119.52 & 29.91 & 8800.88 & 15522.85 \\
+    3 & 482 & 1930 & 1936.37 & 482.84 & 138.08 & 34.56 & 8278.77 & 15305.16 \\
+    4 & 549 & 2198 & 2203.06 & 549.24 & 170.78 & 42.75 & 7269.45 & 14422.80 \\
+    5 & 527 & 2110 & 2117.44 & 528.08 & 169.18 & 42.34 & 7573.83 & 15093.38 \\
     \hline
-    \textbf{Mean} & \textbf{283.4} & \textbf{1135.2} & \textbf{1135.29} & \textbf{282.38} & \textbf{52.06} & \textbf{13.03} & \textbf{14008.29} & \textbf{15269.57} \\
+    \textbf{Mean} & \textbf{492.2} & \textbf{1970.8} & \textbf{1975.95} & \textbf{492.58} & \textbf{143.08} & \textbf{35.81} & \textbf{8158.80} & \textbf{15333.17} \\
     \hline
     \end{tabular}
     \end{table}
 
     \begin{table}[H]
     \centering
-    \caption{Proxmox random read disk I/O benchmark results (fio, 5 runs).}
-    \label{tab:io-read-proxmox}
+    \caption{Hyper-V random read disk I/O benchmark results (fio, 5 runs).}
+    \label{tab:io-read-hyperv}
     \begin{tabular}{lrrrrrrrrr}
     \hline
     \textbf{Run} & \textbf{IOPS} & \textbf{BW (KiB/s)} & \textbf{Avg BW (KiB/s)} & \textbf{Avg IOPS} & \textbf{BW Stdev (KiB/s)} & \textbf{IOPS Stdev} & \textbf{Avg Clat ($\mu$s)} & \textbf{Clat Stdev ($\mu$s)} \\
     \hline
-    1 & & & & & & & & \\
-    2 & & & & & & & & \\
-    3 & & & & & & & & \\
-    4 & & & & & & & & \\
-    5 & & & & & & & & \\
+    1 & 1208 & 4836 & 6656.42 & 1664.10 & 1966.31 & 491.50 & 2641.23 & 17627.05 \\
+    2 & 784  & 3136 & 3586.73 &  896.61 & 1071.00 & 267.74 & 4699.18 & 17736.13 \\
+    3 & 1407 & 5629 & 10425.61 & 2606.40 & 2100.86 & 525.22 & 2120.93 & 10220.93 \\
+    4 & 331  & 1327 & 1337.34 &  334.34 &  334.55 &  83.64 & 12037.14 & 34537.07 \\
+    5 & 255  & 1022 & 1024.56 &  256.14 &   81.30 &  20.32 & 15628.57 & 25716.13 \\
     \hline
-    \textbf{Mean} & & & & & & & & \\
+    \textbf{Mean} & \textbf{797.00} & \textbf{3190.00} & \textbf{4606.13} & \textbf{1151.52} & \textbf{1110.80} & \textbf{277.68} & \textbf{7425.41} & \textbf{21167.46} \\
     \hline
     \end{tabular}
     \end{table}
@@ -821,32 +1069,32 @@
     \hline
     \textbf{Run} & \textbf{IOPS} & \textbf{BW (KiB/s)} & \textbf{Avg BW (KiB/s)} & \textbf{Avg IOPS} & \textbf{BW Stdev (KiB/s)} & \textbf{IOPS Stdev} & \textbf{Avg Clat ($\mu$s)} & \textbf{Clat Stdev ($\mu$s)} \\
     \hline
-    1 & 133 & 534 & 3930.80 & 980.98  & 996.44  & 249.30 & 29862.54 & 402831.82 \\
-    2 & 142 & 568 & 3032.12 & 756.62  & 917.81  & 229.52 & 28033.35 & 445593.33 \\
-    3 & 178 & 713 & 5303.47 & 1324.18 & 1150.74 & 287.79 & 22326.45 & 383498.96 \\
-    4 & 189 & 758 & 6071.94 & 1517.17 & 1305.09 & 326.34 & 20985.67 & 353770.39 \\
-    5 & 209 & 836 & 5295.56 & 1322.22 & 1262.74 & 315.85 & 19019.98 & 316261.22 \\
+    1 & 210 & 843 & 6626.44 & 1655.44 & 848.07  & 212.12 & 18960.08 & 301721.68 \\
+    2 & 213 & 854 & 6773.45 & 1692.30 & 1737.64 & 434.43 & 18730.50 & 285416.99 \\
+    3 & 195 & 782 & 6412.31 & 1601.81 & 877.75  & 219.42 & 20459.91 & 318313.24 \\
+    4 & 213 & 852 & 5208.01 & 1300.53 & 1261.67 & 315.49 & 18754.88 & 247211.03 \\
+    5 & 217 & 870 & 6355.35 & 1587.47 & 1087.22 & 271.86 & 18382.67 & 278629.77 \\
     \hline
-    \textbf{Mean} & \textbf{170.2} & \textbf{681.8} & \textbf{4726.78} & \textbf{1180.23} & \textbf{1126.56} & \textbf{281.76} & \textbf{24045.60} & \textbf{380391.14} \\
+    \textbf{Mean} & \textbf{209.6} & \textbf{840.2} & \textbf{6275.11} & \textbf{1567.51} & \textbf{1162.47} & \textbf{290.66} & \textbf{19057.61} & \textbf{286258.54} \\
     \hline
     \end{tabular}
     \end{table}
 
     \begin{table}[H]
     \centering
-    \caption{Proxmox random write disk I/O benchmark results (fio, 5 runs).}
-    \label{tab:io-write-proxmox}
+    \caption{Hyper-V random write disk I/O benchmark results (fio, 5 runs).}
+    \label{tab:io-write-hyperv}
     \begin{tabular}{lrrrrrrrrr}
     \hline
     \textbf{Run} & \textbf{IOPS} & \textbf{BW (KiB/s)} & \textbf{Avg BW (KiB/s)} & \textbf{Avg IOPS} & \textbf{BW Stdev (KiB/s)} & \textbf{IOPS Stdev} & \textbf{Avg Clat ($\mu$s)} & \textbf{Clat Stdev ($\mu$s)} \\
     \hline
-    1 & & & & & & & & \\
-    2 & & & & & & & & \\
-    3 & & & & & & & & \\
-    4 & & & & & & & & \\
-    5 & & & & & & & & \\
+    1 &  92 & 369 &  435.97 & 108.99 & 130.33 & 32.58 & 42722.66 & 120067.75 \\
+    2 & 159 & 638 &  735.81 & 183.95 & 148.37 & 37.09 & 24831.00 &  89098.41 \\
+    3 & 158 & 634 &  716.83 & 179.21 & 150.17 & 37.54 & 25149.49 &  86951.14 \\
+    4 & 170 & 680 &  779.86 & 194.93 & 147.21 & 36.80 & 23436.48 &  82198.34 \\
+    5 & 144 & 579 &  688.32 & 172.08 & 135.59 & 33.90 & 27369.24 &  97474.40 \\
     \hline
-    \textbf{Mean} & & & & & & & & \\
+    \textbf{Mean} & \textbf{144.60} & \textbf{580.00} & \textbf{671.36} & \textbf{167.83} & \textbf{142.33} & \textbf{35.58} & \textbf{28701.77} & \textbf{95158.01} \\
     \hline
     \end{tabular}
     \end{table}
