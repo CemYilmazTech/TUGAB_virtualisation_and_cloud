@@ -102,46 +102,6 @@
       \verb 10.1145/1165389.945462
       \endverb
     \endentry
-    \entry{Chapter5Virtual}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=2baf8209f62fd23c32fa375f52fbf33f}{%
-           family={Corporation},
-           familyi={C\bibinitperiod},
-           given={Oracle},
-           giveni={O\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \strng{fullhash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \strng{bibnamehash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \strng{authorbibnamehash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \strng{authornamehash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \strng{authorfullhash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{2}
-      \field{title}{Chapter~5.~{{Virtual Storage}}}
-      \field{urlday}{5}
-      \field{urlmonth}{6}
-      \field{urlyear}{2026}
-      \field{year}{2026}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb C:\Users\Cem\Zotero\storage\Q6QA8WLF\ch05.html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.virtualbox.org/manual/ch05.html
-      \endverb
-      \verb{url}
-      \verb https://www.virtualbox.org/manual/ch05.html
-      \endverb
-    \endentry
     \entry{giallorenzoVirtualizationCostsBenchmarking2021}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=59ec2277e593c4bc2ec6a6f2db160556}{%
@@ -293,6 +253,43 @@
       \endverb
       \verb{url}
       \verb https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/overview
+      \endverb
+    \endentry
+    \entry{Chapter5Virtual}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d51288dc67d9f5e0330d927a009e208b}{%
+           family={{Oracle Corporation}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{fullhash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{bibnamehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{authorbibnamehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{authornamehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{authorfullhash}{d51288dc67d9f5e0330d927a009e208b}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{Chapter~5.~{{Virtual Storage}}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Cem\Zotero\storage\Q6QA8WLF\ch05.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.virtualbox.org/manual/ch05.html
+      \endverb
+      \verb{url}
+      \verb https://www.virtualbox.org/manual/ch05.html
       \endverb
     \endentry
     \entry{popekFormalRequirementsVirtualizable1974}{article}{}
@@ -488,46 +485,6 @@
       \verb 10.1145/1165389.945462
       \endverb
     \endentry
-    \entry{Chapter5Virtual}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=2baf8209f62fd23c32fa375f52fbf33f}{%
-           family={Corporation},
-           familyi={C\bibinitperiod},
-           given={Oracle},
-           giveni={O\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \strng{fullhash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \strng{bibnamehash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \strng{authorbibnamehash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \strng{authornamehash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \strng{authorfullhash}{2baf8209f62fd23c32fa375f52fbf33f}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{2}
-      \field{title}{Chapter~5.~{{Virtual Storage}}}
-      \field{urlday}{5}
-      \field{urlmonth}{6}
-      \field{urlyear}{2026}
-      \field{year}{2026}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb C:\Users\Cem\Zotero\storage\Q6QA8WLF\ch05.html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.virtualbox.org/manual/ch05.html
-      \endverb
-      \verb{url}
-      \verb https://www.virtualbox.org/manual/ch05.html
-      \endverb
-    \endentry
     \entry{giallorenzoVirtualizationCostsBenchmarking2021}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=59ec2277e593c4bc2ec6a6f2db160556}{%
@@ -679,6 +636,43 @@
       \endverb
       \verb{url}
       \verb https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/overview
+      \endverb
+    \endentry
+    \entry{Chapter5Virtual}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d51288dc67d9f5e0330d927a009e208b}{%
+           family={{Oracle Corporation}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{fullhash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{bibnamehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{authorbibnamehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{authornamehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{authorfullhash}{d51288dc67d9f5e0330d927a009e208b}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{Chapter~5.~{{Virtual Storage}}}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb C:\Users\Cem\Zotero\storage\Q6QA8WLF\ch05.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.virtualbox.org/manual/ch05.html
+      \endverb
+      \verb{url}
+      \verb https://www.virtualbox.org/manual/ch05.html
       \endverb
     \endentry
     \entry{popekFormalRequirementsVirtualizable1974}{article}{}
